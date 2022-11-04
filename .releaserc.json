@@ -1,0 +1,51 @@
+{
+  "branches": [
+    { "name": "main", "channel": "release" },
+    { "name": "next", "channel": "distribution-minor" },
+    { "name": "next-major", "channel": "distribution-major" },
+    { "name": "beta", "channel": "prerelease-beta", "prerelease": "SNAPSHOT" },
+    { "name": "rc", "channel": "prerelease-rc", "prerelease": "RC" }
+  ],
+  "preset": "conventionalcommits",
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "releaseRules": [
+          {"breaking": true, "release": "minor"}
+        ]
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogTitle": "Release Notes\n---",
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "echo ::set-output name=new-release-version::${nextRelease.version}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "successComment": false
+      }
+    ],
+    "gradle-semantic-release-plugin",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "gradle.properties",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version}"
+      }
+    ]
+  ]
+}
