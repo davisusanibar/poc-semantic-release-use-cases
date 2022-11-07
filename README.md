@@ -87,4 +87,6 @@ subir a 2.0.0
 en 1.0.x -> fix: a fix
 
 merge 1.0.x en main
+
+first beta from master v2.0.1
 ```
