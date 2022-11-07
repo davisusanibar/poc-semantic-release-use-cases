@@ -53,7 +53,6 @@ main < next < next-major < beta < alpha
 Test: Change as a maintenance feature: feat: feature 001
 Test: Change as a maintenance feature + break: feat: feature 001 !BREAKING CHANGE
 Test: Change as a maintenance feature: feat: feature 002
-
-
+Test: Main: Change as a maintenance feature: feat: feature 003 with next branch just created
 
 ```
