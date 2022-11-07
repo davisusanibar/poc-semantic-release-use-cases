@@ -59,28 +59,28 @@ allprojects {
                 val snapshotsRepoUrl = "$buildDir/repos/snapshots"
                 url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
             }
-            maven {
-                name = "github"
-                url = uri("https://github.com/davisusanibar/poc-semantic-release-use-cases")
-                credentials {
-                    username = System.getenv("GITHUB_ACTOR").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_ACTOR"].toString()
-                    password = System.getenv("GITHUB_TOKEN").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_TOKEN"].toString()
-                }
-            }
+//            maven {
+//                name = "github"
+//                url = uri("https://github.com/davisusanibar/poc-semantic-release-use-cases")
+//                credentials {
+//                    username = System.getenv("GITHUB_ACTOR").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_ACTOR"].toString()
+//                    password = System.getenv("GITHUB_TOKEN").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_TOKEN"].toString()
+//                }
+//            }
         }
     }
-    nexusPublishing {
-        repositories {
-            create("sonatype") {
-                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
-                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-                username.set(sonatypeUser)
-                password.set(sonatypePassword)
-            }
-        }
-    }
+//    nexusPublishing {
+//        repositories {
+//            create("sonatype") {
+//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
+//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
+//                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+//                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+//                username.set(sonatypeUser)
+//                password.set(sonatypePassword)
+//            }
+//        }
+//    }
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
