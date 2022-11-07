@@ -101,4 +101,5 @@ primer cambio en beta
 rompiendo breaking change on beta from 1.0.1  hacia 2.x
 
 test fix si cambia version de beta
+test feat si cambia version de betas
 ```
