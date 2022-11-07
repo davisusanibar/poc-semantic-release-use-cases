@@ -101,7 +101,7 @@ allprojects {
         withJavadocJar()
         withSourcesJar()
     }
-    signing {
-        sign(publishing.publications["mavendavisusanibar"])
-    }
+//    signing {
+//        sign(publishing.publications["mavendavisusanibar"])
+//    }
 }
