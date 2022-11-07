@@ -50,6 +50,9 @@ gpg --keyring signgithubjars.gpg --export-secret-keys > ~/.gnupg/signgithubjars.
 ```shell
 main < next < next-major < beta < alpha
 
-Test: Feature as a maintenance: feat: feature 001
+Test: Change as a maintenance feature: feat: feature 001
+Test: Change as a maintenance feature + break: feat: feature 001 !BREAKING CHANGE
+
+
 
 ```
