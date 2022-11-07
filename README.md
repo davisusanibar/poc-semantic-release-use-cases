@@ -77,4 +77,10 @@ Otra prueba. se borro todos los tags/branches
 - fix: 01 - 2nd
 
 - agregar breaking change
+
+
+// otro inicio:
+
+- crear 1.0.0
+
 ```
