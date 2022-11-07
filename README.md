@@ -83,4 +83,6 @@ Otra prueba. se borro todos los tags/branches
 
 - crear 1.0.0
 
+en 1.0.x -> fix: a fix
+
 ```
