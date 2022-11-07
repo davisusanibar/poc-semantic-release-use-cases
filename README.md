@@ -91,4 +91,6 @@ merge 1.0.x en main
 first beta from master v2.0.1
 first beta from master v2.0.1 - 2nd try
 
+
+en main desde 2.1.0 hacia 2.1.1
 ```
