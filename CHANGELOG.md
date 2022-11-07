@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [0.0.4](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v0.0.3...v0.0.4) (2022-11-07)
+
+
+### Bug Fixes
+
+* update cicd config ([6c7b838](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/6c7b83855215adc1ec361f994542c404152888af))
+
 ## [0.0.3](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v0.0.2...v0.0.3) (2022-11-07)
 
 
