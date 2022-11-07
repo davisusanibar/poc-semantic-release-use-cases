@@ -56,5 +56,12 @@ Test: Change as a maintenance feature: feat: feature 002
 Test: Main: Change as a maintenance feature: feat: feature 003 with next branch just created
 OK: From: v1.1.0 To: v1.2.0
 Test: Main: Change as a maintenance feature: feat: feature 004 with next-major branch just created
+OK: From: v1.2.0 To: v1.3.0
+Test: Main: Change as a maintenance feature: feat: feature 005 with next-major branch just created + maintenance branch added
+OK: From: v1.3.0 To: v1.4.0
+
+git checkout -b 1.x v1.3.0
+
+
 
 ```
