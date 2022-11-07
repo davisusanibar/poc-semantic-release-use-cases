@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [1.4.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.3.0...v1.4.0) (2022-11-07)
+
+
+### Features
+
+* feature 005 on 1.x ([43d782d](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/43d782dc64ea7279ce2f8e0c54d109631d598aa6))
+
 ## [1.3.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.0...v1.3.0) (2022-11-07)
 
 
