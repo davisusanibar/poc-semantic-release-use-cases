@@ -64,6 +64,13 @@ git checkout -b 1.x v1.3.0
 
 // nuevo inicio:
 
+- delete todos branch menos main:
+git branch -r | grep 'origin' | grep -v 'main$' | grep -v HEAD | cut -d/ -f2- | while read line; do git push origin :heads/$line; done;
+- delete todos remote tags:
+git push origin --delete $(git tag -l)
+- delete todos local tag:
+git tag -l | xargs git tag -d
+
 Otra prueba. se borro todos los tags/branches
 
 1. Todo configurado como saldremos PROD
