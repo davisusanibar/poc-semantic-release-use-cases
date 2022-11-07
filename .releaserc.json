@@ -1,22 +1,18 @@
 {
   "branches": [
-    { "name": "main", "channel": "release" },
-    { "name": "next", "channel": "distribution-minor" },
-    { "name": "next-major", "channel": "distribution-major" },
-    { "name": "beta", "channel": "prerelease-beta", "prerelease": "SNAPSHOT" },
-    { "name": "rc", "channel": "prerelease-rc", "prerelease": "RC" }
+    { "name": "main", "channel": "releases" },
+    { "name": "next", "channel": "snapshots" },
+    { "name": "next-major", "channel": "snapshots" },
+    { "name": "beta", "channel": "snapshots", "prerelease": true },
+    { "name": "alpha", "channel": "snapshots", "prerelease": true },
+    { "name": "custom", "channel": "snapshots", "prerelease": true }
   ],
   "preset": "conventionalcommits",
   "plugins": [
-    [
-      "@semantic-release/commit-analyzer",
-      {
-        "releaseRules": [
-          {"breaking": true, "release": "minor"}
-        ]
-      }
-    ],
+    "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "@semantic-release/exec",
+    "gradle-semantic-release-plugin",
     [
       "@semantic-release/changelog",
       {
@@ -25,18 +21,11 @@
       }
     ],
     [
-      "@semantic-release/exec",
-      {
-        "publishCmd": "echo ::set-output name=new-release-version::${nextRelease.version}"
-      }
-    ],
-    [
       "@semantic-release/github",
       {
         "successComment": false
       }
     ],
-    "gradle-semantic-release-plugin",
     [
       "@semantic-release/git",
       {

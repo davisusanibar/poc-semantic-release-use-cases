@@ -72,8 +72,8 @@ allprojects {
     nexusPublishing {
         repositories {
             create("sonatype") {
-                val sonatypeUser = System.getenv("sonatype.user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype.user"].toString()
-                val sonatypePassword = System.getenv("sonatype.password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype.password"].toString()
+                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
+                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
                 nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
                 snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
                 username.set(sonatypeUser)
