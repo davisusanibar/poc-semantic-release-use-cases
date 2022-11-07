@@ -62,6 +62,12 @@ OK: From: v1.3.0 To: v1.4.0
 
 git checkout -b 1.x v1.3.0
 
+// nuevo inicio:
+
+Otra prueba. se borro todos los tags/branches
+
+1. Todo configurado como saldremos PROD
+- fix: 01
 
 
 ```
