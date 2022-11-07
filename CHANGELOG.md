@@ -1,6 +1,17 @@
 Release Notes
 ---
 
+## [1.0.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v0.1.0...v1.0.0) (2022-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Test feat + breakin g change
+
+### Features
+
+* Test control of branches next, next-major (there are not created) ([626616f](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/626616f9c4b2814aadfc422b46f405a0f7271f1a))
+
 ## [0.1.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v0.0.6...v0.1.0) (2022-11-07)
 
 
