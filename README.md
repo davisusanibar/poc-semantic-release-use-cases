@@ -54,5 +54,7 @@ Test: Change as a maintenance feature: feat: feature 001
 Test: Change as a maintenance feature + break: feat: feature 001 !BREAKING CHANGE
 Test: Change as a maintenance feature: feat: feature 002
 Test: Main: Change as a maintenance feature: feat: feature 003 with next branch just created
+OK: From: v1.1.0 To: v1.2.0
+Test: Main: Change as a maintenance feature: feat: feature 004 with next-major branch just created
 
 ```
