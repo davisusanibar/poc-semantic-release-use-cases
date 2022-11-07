@@ -45,4 +45,11 @@ gpg --keyring signgithubjars.gpg --export-secret-keys > ~/.gnupg/signgithubjars.
 ## Semantic-release Configuration
 
 
-##
+## Test release candidate changes
+
+```shell
+main < next < next-major < beta < alpha
+
+Test: Feature as a maintenance: feat: feature 001
+
+```
