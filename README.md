@@ -117,4 +117,8 @@ main hacia 1.2git
 //
 inicio de todo nuevamente
 feat: 01
+
+// 1.1.x -> fix: 001
+
+
 ```
