@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [1.1.1](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.1.0...v1.1.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* 001 on 1.1.x ([c3c3a46](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/c3c3a460792d82a55623f1b9e7975dc97f6d2ab3))
+
 ## [1.1.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.0.0...v1.1.0) (2022-11-08)
 
 
