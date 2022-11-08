@@ -124,6 +124,7 @@ en 1.0.x
 
 // 1.1.x -> fix: 001
 
+// test send to sontype cloud
 
 ```
 
