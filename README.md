@@ -118,4 +118,11 @@ main hacia 1.2git
 inicio de todo nuevamente
 feat: 01
 feat: 02
+
+//
+en 1.0.x
 ```
+
+
+
+
