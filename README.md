@@ -112,4 +112,5 @@ test breaking change on beta
 de nuevo iniciando enbranch
 
 main hacia 1.1
+main hacia 1.2
 ```
