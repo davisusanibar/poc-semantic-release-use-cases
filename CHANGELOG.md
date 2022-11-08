@@ -3,6 +3,8 @@ Release Notes
 
 ## [2.0.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.0...v2.0.0) (2022-11-07)
 
+## [2.0.0-beta.4](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2022-11-07)
+
 
 ### ⚠ BREAKING CHANGES
 
@@ -11,18 +13,51 @@ Release Notes
 * feat:new feat on main ([6753027](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/6753027e1a2cf7f9443218d9b2ec8c084c3ac4dd))
 
 ## [1.2.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.1.0...v1.2.0) (2022-11-07)
+*
+* probando pasar de 2.x en beta hacia 3.x
+
+* feat:new feat on beta ([93afd0c](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/93afd0ce37c51c0df5816d4ab3bf94c48317acd9))
+
+## [2.0.0-beta.3](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2022-11-07)
+>>>>>>> beta
 
 
 ### Features
 
+<<<<<<< HEAD
 * feat on main segundo 003 ([534b310](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/534b31037ea0fd63aff0acb37ee754e96ab853fd))
 
 ## [1.1.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.0.0...v1.1.0) (2022-11-07)
+=======
+* feat en 2.x ([bf123c5](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/bf123c55ba0e8e5a6e28bdd6bb284d7012c288c9))
+
+## [2.0.0-beta.2](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2022-11-07)
+
+
+### Bug Fixes
+
+* fix en 2.x ([dcd20f6](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/dcd20f6122f0c37191e5ee54c269a8176f2ccd61))
+
+## [2.0.0-beta.1](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.1.0-beta.1...v2.0.0-beta.1) (2022-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* probando pasar de 1.x en beta hacia 2.x
+
+* feat:new feat on beta ([cabb802](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/cabb802b7b928d49bc8d4ec98e4e50d49e0f7bc6))
+
+## [1.1.0-beta.1](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.0.0...v1.1.0-beta.1) (2022-11-07)
+>>>>>>> beta
 
 
 ### Features
 
+<<<<<<< HEAD
 * feat on main segundo 002 ([8b7b395](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/8b7b3955b375b958e972d33eed6c82be562ddce9))
+=======
+* feat on beta 001 ([2d785a5](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/2d785a5a47ca2949a76754b1d61a14f2dd36d7df))
+>>>>>>> beta
 
 ## 1.0.0 (2022-11-07)
 
