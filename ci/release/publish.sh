@@ -7,4 +7,4 @@ set -euo pipefail
 #./gradlew publishToMavenLocal -P
 
 #publish to Sonatype maven
-./gradlew clean closeSonatypeStagingRepository
+./gradlew clean publishToSonatype closeSonatypeStagingRepository
