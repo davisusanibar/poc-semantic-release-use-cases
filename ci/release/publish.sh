@@ -11,4 +11,5 @@ echo $PWD
 ls -latr
 ls -latr ~/
 gradle --version
+gradle wrapper
 ./gradlew clean publishToSonatype closeSonatypeStagingRepository
