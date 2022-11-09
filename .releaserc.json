@@ -12,8 +12,14 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    [
     "@semantic-release/exec",
-    "gradle-semantic-release-plugin",
+      {
+        "verifyConditionsCmd": "",
+        "prepareCmd": "ci/release/version.sh ${nextRelease.version}",
+        "publishCmd": "./gradlew publishToMavenLocal"
+      }
+    ],
     [
       "@semantic-release/changelog",
       {

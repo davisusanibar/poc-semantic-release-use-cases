@@ -67,32 +67,32 @@ allprojects {
 //                    password = System.getenv("GITHUB_TOKEN").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_TOKEN"].toString()
 //                }
 //            }
-//            maven {
-//                name = "sonatypeLocal"
-//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
-//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-//                val releasesRepoUrl = "http://localhost:8081/repository/maven-releases/"
-//                val snapshotsRepoUrl = "http://localhost:8081/repository/maven-snapshots/"
-//                isAllowInsecureProtocol = true
-//                url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
-//                credentials {
-//                    username = sonatypeUser
-//                    password = sonatypePassword
-//                }
-//            }
-
             maven {
-                name = "sonatypeCloud"
+                name = "sonatypeLocal"
                 val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
                 val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-                val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/"
-                val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+                val releasesRepoUrl = "http://localhost:8081/repository/maven-releases/"
+                val snapshotsRepoUrl = "http://localhost:8081/repository/maven-snapshots/"
+                isAllowInsecureProtocol = true
                 url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
                 credentials {
                     username = sonatypeUser
                     password = sonatypePassword
                 }
             }
+
+//            maven {
+//                name = "sonatypeCloud"
+//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
+//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
+//                val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/"
+//                val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+//                url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+//                credentials {
+//                    username = sonatypeUser
+//                    password = sonatypePassword
+//                }
+//            }
         }
     }
 //    nexusPublishing {
