@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [1.3.0](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.3...v1.3.0) (2022-11-09)
+
+
+### Features
+
+* java release to sonatype ([6936162](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/693616291a170ed0dd539f1eec73139dcb88f06b))
+
 ## [1.2.3](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.2...v1.2.3) (2022-11-09)
 
 
