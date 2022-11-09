@@ -14,7 +14,6 @@
     [
     "@semantic-release/exec",
       {
-        "verifyConditionsCmd": "ci/release/verify.sh",
         "prepareCmd": "ci/release/version.sh ${nextRelease.version}",
         "publishCmd": "ci/release/publish.sh"
       }
