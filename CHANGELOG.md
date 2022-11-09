@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [1.4.12](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.4.11...v1.4.12) (2022-11-09)
+
+
+### Bug Fixes
+
+* changes on build ([1e5c543](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/1e5c543cdee0604ffe305cc7e326ae3061a7fa2f))
+
 ## [1.4.11](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.4.10...v1.4.11) (2022-11-09)
 
 
