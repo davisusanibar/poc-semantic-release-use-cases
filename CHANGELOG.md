@@ -1,6 +1,13 @@
 Release Notes
 ---
 
+## [1.4.2](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.4.1...v1.4.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* test local gradlew ([ab7e324](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/ab7e3244b976008f34f3ebed85991c6454e8b906))
+
 ## [1.4.1](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.4.0...v1.4.1) (2022-11-09)
 
 
