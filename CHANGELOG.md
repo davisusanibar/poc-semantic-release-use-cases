@@ -1,6 +1,17 @@
 Release Notes
 ---
 
+## [1.2.3](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.2...v1.2.3) (2022-11-09)
+
+
+### Bug Fixes
+
+* add build changes ([63e899c](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/63e899c578b869659912eec27dd6eb664aba977c))
+* add build changes ([0ecac91](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/0ecac919e933c379eadf0bacfc2b3ebc3183690e))
+* add build changes ([d95d0bc](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/d95d0bca19cd354946589bd8ec37067683c0c649))
+* add build changes ([e6a8c56](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/e6a8c56473835b6c482ff863138ccc172495a020))
+* test sonatype cloud ([b651592](https://github.com/davisusanibar/poc-semantic-release-use-cases/commit/b651592dc43817513aa526b578f4f6dcbba0f051))
+
 ## [1.2.2](https://github.com/davisusanibar/poc-semantic-release-use-cases/compare/v1.2.1...v1.2.2) (2022-11-08)
 
 
