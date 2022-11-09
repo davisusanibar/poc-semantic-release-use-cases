@@ -5,8 +5,7 @@
     { "name": "next" },
     { "name": "next-major" },
     { "name": "beta", "prerelease": true },
-    { "name": "alpha", "prerelease": true },
-    { "name": "custom", "prerelease": true }
+    { "name": "alpha", "prerelease": true }
   ],
   "preset": "conventionalcommits",
   "plugins": [
@@ -17,7 +16,7 @@
       {
         "verifyConditionsCmd": "ci/release/verify.sh",
         "prepareCmd": "ci/release/version.sh ${nextRelease.version}",
-        "publishCmd": "./gradlew publishToMavenLocal"
+        "publishCmd": "ci/release/publish.sh"
       }
     ],
     [

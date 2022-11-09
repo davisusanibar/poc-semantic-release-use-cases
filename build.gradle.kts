@@ -20,7 +20,7 @@ dependencies {
 allprojects {
     publishing {
         publications {
-            create<MavenPublication>("mavendavisusanibar") {
+            create<MavenPublication>("maven-publish") {
                 from(components["java"])
 
                 pom {
@@ -59,54 +59,20 @@ allprojects {
                 val snapshotsRepoUrl = "$buildDir/repos/snapshots"
                 url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
             }
-//            maven {
-//                name = "github"
-//                url = uri("https://github.com/davisusanibar/poc-semantic-release-use-cases")
-//                credentials {
-//                    username = System.getenv("GITHUB_ACTOR").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_ACTOR"].toString()
-//                    password = System.getenv("GITHUB_TOKEN").takeUnless { it.isNullOrEmpty() } ?: extra["GITHUB_TOKEN"].toString()
-//                }
-//            }
-//            maven {
-//                name = "sonatypeLocal"
-//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
-//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-//                val releasesRepoUrl = "http://localhost:8081/repository/maven-releases/"
-//                val snapshotsRepoUrl = "http://localhost:8081/repository/maven-snapshots/"
-//                isAllowInsecureProtocol = true
-//                url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
-//                credentials {
-//                    username = sonatypeUser
-//                    password = sonatypePassword
-//                }
-//            }
-
-//            maven {
-//                name = "sonatypeCloud"
-//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
-//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-//                val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/"
-//                val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-//                url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
-//                credentials {
-//                    username = sonatypeUser
-//                    password = sonatypePassword
-//                }
-//            }
         }
     }
-//    nexusPublishing {
-//        repositories {
-//            create("sonatype") {
-//                val sonatypeUser = System.getenv("sonatype_user").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_user"].toString()
-//                val sonatypePassword = System.getenv("sonatype_password").takeUnless { it.isNullOrEmpty() } ?: extra["sonatype_password"].toString()
-//                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-//                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-//                username.set(sonatypeUser)
-//                password.set(sonatypePassword)
-//            }
-//        }
-//    }
+    nexusPublishing {
+        repositories {
+            create("sonatype") {
+                val sonatypeUser = System.getenv("SONATYPE_USER").takeUnless { it.isNullOrEmpty() } ?: extra["SONATYPE_USER"].toString()
+                val sonatypePassword = System.getenv("SONATYPE_PASSWORD").takeUnless { it.isNullOrEmpty() } ?: extra["SONATYPE_PASSWORD"].toString()
+                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+                username.set(sonatypeUser)
+                password.set(sonatypePassword)
+            }
+        }
+    }
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
@@ -114,7 +80,12 @@ allprojects {
         withJavadocJar()
         withSourcesJar()
     }
-//    signing {
-//        sign(publishing.publications["mavendavisusanibar"])
-//    }
+
+    signing {
+        val signingKeyId = System.getenv("SIGNING_KEY_ID").takeUnless { it.isNullOrEmpty() } ?: extra["SIGNING_KEY_ID"].toString()
+        val signingPassword = System.getenv("SIGNING_PASSWORD").takeUnless { it.isNullOrEmpty() } ?: extra["SIGNING_PASSWORD"].toString()
+        val signingKey = System.getenv("SIGNING_KEY").takeUnless { it.isNullOrEmpty() } ?: extra["SIGNING_KEY"].toString()
+        useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
+        sign(publishing.publications["maven-publish"])
+    }
 }
