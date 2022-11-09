@@ -8,5 +8,7 @@ set -euo pipefail
 
 #publish to Sonatype maven
 echo $PWD
+ls -latr
 ls -latr ~/
+gradle --version
 ./gradlew clean publishToSonatype closeSonatypeStagingRepository
